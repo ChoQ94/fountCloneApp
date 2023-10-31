@@ -4,7 +4,7 @@ import {AppState, AppStateStatus, SafeAreaView, Text, View} from 'react-native';
 const App = () => {
   // 현재 앱 상태 확인 로직
   const appState = useRef(AppState.currentState);
-  const [appStateVisible, setAppStateVisible] = useState(appState.current);
+  const [, setAppStateVisible] = useState(appState.current);
   const appStateUpdater = (nextAppState: AppStateStatus) => {
     if (
       appState.current.match(/inactive|background/) &&
